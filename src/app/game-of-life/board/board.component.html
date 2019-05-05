@@ -1,0 +1,15 @@
+<div fxFlex="1 1 100%" class="cellContainer">
+    <mat-card fxLayout="row wrap" class="cellsWrap">
+      <div 
+      class="cells" 
+      fxFlex="1 1 1.25%" 
+      *ngFor = "let cell of game.currentGeneration; let i = index; trackBy: trackByFn;" 
+      (click)="onCellToggle(i)">
+
+          <div 
+          class="cell" 
+          [ngClass]= "{dead: cell.status === 'dead', alive: cell.status === 'alive'}"></div>
+          
+      </div>
+    </mat-card>
+</div>

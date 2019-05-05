@@ -1,0 +1,56 @@
+.app-wrapper{
+    max-width: 54rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0.7rem;
+    margin: auto;
+
+    .title{
+        font-size: 6rem;
+        color: rgb(243, 187, 103);
+        margin: 0;
+    }
+
+    .content{
+        border: 0.1rem solid gray;
+        background-color: rgb(180, 180, 180);
+        padding: 0;
+
+        .cellContainer {
+            background-color: rgb(180, 180, 180);
+            padding: 0.7rem;
+
+        }
+
+        .actionButtons{
+            background-color: rgb(180, 180, 180);
+            margin: 1rem;
+            
+            .matForm{
+                margin: 0 0.5rem;
+                
+                .matLabel{
+                    font-weight: 700;
+                    color: black
+                }
+            }
+
+            .gameToggle{
+                height: 2.8rem;
+            }
+
+            .stop{
+                background-color: rgb(165, 80, 69);
+            }
+
+            .start{
+                background-color: rgb(39, 167, 124);
+            }
+
+            .genInfo{
+                margin-left: 25rem;
+            }
+        }
+    }
+    
+}

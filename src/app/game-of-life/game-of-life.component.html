@@ -1,0 +1,47 @@
+<div fxLayout="column" class="app-wrapper">
+  <h1 fxFlex="1 1 100%" class="title"> {{ title }}</h1>
+
+  <div fxFlex="1 1 100%" class="content">
+    <div fxLayout="column">
+        <app-board [game] ="game" (changedStatus) = "onCellToggle($event)"></app-board>
+  
+        <div fxFlex="1 1 100%">
+            <div fxLayout="row" class="actionButtons">
+                <mat-form-field fxFlex="1 1 20%" fxFlexAlign = "Start" class="matForm">
+                    <mat-label class="matLabel">Starting Point</mat-label>
+                    <mat-select class="matSelect">
+                      <mat-option 
+                      value="Clear" 
+                      class="clear" 
+                      (click) = "onClear()">Clean board</mat-option>
+  
+                      <mat-option 
+                      value="glider" 
+                      class="glider" 
+                      (click) = "onSetGlider()">Glider</mat-option>
+  
+                      <mat-option 
+                      value="smallExploder" 
+                      class="smallExploder"  
+                      (click) = "onSetSmExp()"> Small Exploder</mat-option>
+  
+                    </mat-select>
+                </mat-form-field>
+        
+                <button 
+                  fxFlex="1 1 15%" 
+                  class="gameToggle" 
+                  mat-raised-button (click) = "gameToggle()"
+                  [ngClass]= "{stop: gameStarted, start: !gameStarted}">
+                  {{ gameStarted ? 'Stop' : 'Start'}}</button>
+  
+                <p 
+                fxFlex="1 1 15%" 
+                class = "genInfo"  
+                fxFlexAlign = "end end">Generation: {{ game.generation }}</p>
+        
+              </div>    
+        </div>
+    </div>
+  </div>
+</div>

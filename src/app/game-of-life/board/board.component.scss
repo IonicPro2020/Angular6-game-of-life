@@ -1,0 +1,27 @@
+.cellsWrap{
+    background-color: rgb(156, 128, 128);
+    border: 0.07rem solid black;
+    padding: 0;
+    
+    .cell{
+        height: 0.625rem;
+        margin: 0;
+        padding: 0;
+        border-right: 0.00375rem solid rgb(156, 128, 128);
+        border-bottom: 0.00375rem solid rgb(156, 128, 128);
+        
+      }
+  
+      .dead {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .alive {
+        background-color: green;
+        margin: 0;
+        padding: 0;
+      }
+
+}
